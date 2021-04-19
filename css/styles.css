@@ -169,6 +169,19 @@ img {
 .contacts-header .list-item:not(:last-child) {
   margin-right: 50px;
 }
+.contacts-header .list-item::before {
+  content: "";
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  background-size: contain;
+}
+.contacts-header .list-item:nth-child(1)::before {
+  background-image: url("");
+}
+.contacts-header .list-item:nth-child(2)::before {
+  background-image: url("");
+}
 
 .contacts-header {
   font-style: normal;
@@ -185,26 +198,28 @@ img {
 }
 
 /* Студия - Герой */
-.hero-section {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
-
-  background-repeat: no-repeat;
-  max-width: 1600px;
+.container-fluid {
+  /* max-width: 1600px; */
 
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("../images/magazine.jpg");
+    url("../images/hero-pic.jpg");
 
   background-color: #c4c4c4;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-section {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .hero-heading {
   font-weight: 900;
