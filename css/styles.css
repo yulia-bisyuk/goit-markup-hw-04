@@ -11,6 +11,8 @@
 
   --background-color-dark-gray: #020202;
 
+  --icons-fill-grey: #afb1b8;
+
   --main-font: "Roboto", sans-serif;
 
   --corner-radius: 4px;
@@ -168,22 +170,13 @@ img {
   color: var(--main-text-color);
   padding-bottom: 20px;
   padding-top: 20px;
+
+  display: flex;
+  align-items: center;
 }
+
 .contacts-header .list-item:not(:last-child) {
   margin-right: 50px;
-}
-.contacts-header .list-item::before {
-  content: "";
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  background-size: contain;
-}
-.contacts-header .list-item:nth-child(1)::before {
-  background-image: url("");
-}
-.contacts-header .list-item:nth-child(2)::before {
-  background-image: url("");
 }
 
 .contacts-header {
@@ -200,6 +193,22 @@ img {
   align-items: center;
 }
 
+.icon-mail {
+  margin-right: 10px;
+  fill: var(--main-text-color);
+}
+.link:hover .icon-mail,
+.link:focus .icon-mail {
+  fill: var(--accent-color);
+}
+.icon-phone {
+  margin-right: 10px;
+  fill: var(--main-text-color);
+}
+.link:hover .icon-phone,
+.link:focus .icon-phone {
+  fill: var(--accent-color);
+}
 /* Студия - Герой */
 
 .hero-section {
@@ -279,6 +288,14 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.advantage-icon-thumb {
+  width: 270px;
+  height: 120px;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+  background-color: var(--background-color-light-grey);
+}
 .advantages-list h3 {
   font-weight: 700;
   font-size: 14px;
@@ -326,6 +343,8 @@ img {
 
   background-color: var(--primary-white-color);
   border-radius: var(--corner-radius);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .team-participant img {
   margin-bottom: 30px;
@@ -348,6 +367,56 @@ img {
   text-align: center;
 
   color: var(--main-text-color);
+}
+.socials-list-team {
+  display: flex;
+  flex-wrap: wrap;
+  width: 206px;
+  height: 44px;
+  justify-content: space-between;
+  margin-right: 32px;
+  margin-left: 32px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+.socials-list-team .icon {
+  fill: var(--icons-fill-grey);
+}
+.link:hover .socials-icon-thumb,
+.link:focus .socials-icon-thumb {
+  background-color: var(--accent-color);
+}
+.link:hover .icon,
+.link:focus .icon {
+  fill: var(--primary-white-color);
+}
+.socials-icon-thumb {
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  border-radius: 50%;
+}
+/* Студия - Постоянные клиенты */
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.clients-icon-thumb {
+  width: 170px;
+  height: 92px;
+  padding: 16px 32px;
+  border-radius: 4px;
+  border: 1px solid var(--icons-fill-grey);
+}
+.clients-icon-thumb:hover,
+.clients-icon-thumb:focus {
+  border-color: var(--accent-color);
+}
+
+.link:hover .icon-client,
+.link:focus .icon-client {
+  fill: var(--accent-color);
 }
 
 /* Портфолио - Список навигации по работам студии */
@@ -467,4 +536,17 @@ img {
 
 .contacts-footer .list-item:not(:last-child) {
   margin-bottom: 9px;
+}
+.join-us-subsection {
+  display: flex;
+}
+.socials-list-footer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 206px;
+  height: 44px;
+  justify-content: space-between;
+  margin-right: 70px;
+  margin-bottom: 100px;
+  /* align-items: center; */
 }
