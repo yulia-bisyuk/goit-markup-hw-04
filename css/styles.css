@@ -382,19 +382,20 @@ img {
 .socials-list-team .icon {
   fill: var(--icons-fill-grey);
 }
-.link:hover .socials-icon-thumb,
-.link:focus .socials-icon-thumb {
-  background-color: var(--accent-color);
-}
 .link:hover .icon,
 .link:focus .icon {
   fill: var(--primary-white-color);
 }
-.socials-icon-thumb {
+.link.socials {
+  display: inline-block;
   width: 44px;
   height: 44px;
   padding: 12px;
   border-radius: 50%;
+}
+.link.socials:hover,
+.link.socials:focus {
+  background-color: var(--accent-color);
 }
 /* Студия - Постоянные клиенты */
 .clients-list {
@@ -402,7 +403,7 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.clients-icon-thumb {
+.link.client {
   display: flex;
   width: 170px;
   height: 92px;
@@ -410,13 +411,14 @@ img {
   border-radius: 4px;
   border: 1px solid var(--icons-fill-grey);
 }
-.clients-icon-thumb:hover,
-.clients-icon-thumb:focus {
+.link.client:hover,
+.link.client:focus {
   border-color: var(--accent-color);
 }
 .icon-client {
   fill: var(--icons-fill-grey);
 }
+
 .link:hover .icon-client,
 .link:focus .icon-client {
   fill: var(--accent-color);
@@ -454,6 +456,8 @@ img {
   color: #fff;
   background-color: var(--accent-color);
   cursor: pointer;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Портфолио - Работы студии */
@@ -481,6 +485,15 @@ img {
   color: var(--main-text-color);
   margin-bottom: 0;
 }
+.studio-work-item .link {
+  display: inline-block;
+}
+.studio-work-item .link:hover,
+.studio-work-item .link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 /* для сітки по формулі */
 .list-item.studio-work-item {
   margin-top: var(--card-items-gap);
@@ -567,10 +580,13 @@ img {
   margin-bottom: 100px;
   /* align-items: center; */
 }
-.socials-icon-thumb.dark {
+.link.socials.dark {
   background-color: rgba(255, 255, 255, 0.1);
 }
-
+.link.socials.dark:hover,
+.link.socials.dark:focus {
+  background-color: var(--accent-color);
+}
 .icon-footer {
   fill: #fff;
 }
