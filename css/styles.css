@@ -9,7 +9,7 @@
 
   --background-color-light-grey: #f5f4fa;
 
-  --background-color-dark-gray: #020202;
+  --background-color-dark-gray: #2f303a;
 
   --icons-fill-grey: #afb1b8;
 
@@ -158,8 +158,6 @@ img {
 
 .header-nav .link {
   color: var(--heading-text-color);
-  padding-bottom: 20px;
-  padding-top: 20px;
 }
 
 .header-nav .current {
@@ -168,8 +166,6 @@ img {
 
 .contacts-header .link {
   color: var(--main-text-color);
-  padding-bottom: 20px;
-  padding-top: 20px;
 
   display: flex;
   align-items: center;
@@ -292,9 +288,12 @@ img {
 .advantage-icon-thumb {
   width: 270px;
   height: 120px;
-  padding: 25px 100px;
   margin-bottom: 30px;
   background-color: var(--background-color-light-grey);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .advantages-list h3 {
   font-weight: 700;
